@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BinaryCounter">
+  <ClassDiagramComponents>
+    <Class name="BinaryConverter" package="binarycounter" visibility="public" xPosition="736.0" yPosition="361.0">
+      <Fields>
+        <Field name="convframe" type="JFrame" visibility="package"/>
+        <Field name="titleconv" type="JLabel" visibility="package"/>
+        <Field name="inarea" type="JTextArea" visibility="package"/>
+        <Field name="convfrom" type="JComboBox" visibility="package"/>
+        <Field name="getresult" type="JButton" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Component" returnType="void" visibility="public"/>
+        <Method name="resetconv" returnType="void" visibility="public"/>
+        <Method name="getBinConvRes" returnType="void" visibility="public"/>
+        <Method name="getDecConvRes" returnType="void" visibility="public"/>
+        <Method name="getHexConvRes" returnType="void" visibility="public"/>
+        <Method name="getOctConvRes" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BinaryCounter" package="binarycounter" visibility="public" xPosition="521.0" yPosition="121.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BinCount" package="binarycounter" visibility="public" isAbstract="true" xPosition="538.0" yPosition="242.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Component" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="BitwiseCalculator" package="binarycounter" visibility="public" xPosition="337.0" yPosition="361.0">
+      <Fields>
+        <Field name="calcframe" type="JFrame" visibility="package"/>
+        <Field name="titlecalc" type="JLabel" visibility="package"/>
+        <Field name="numarea1" type="JTextArea" visibility="package"/>
+        <Field name="unit" type="JComboBox" visibility="package"/>
+        <Field name="getresult" type="JButton" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Action" returnType="void" visibility="public"/>
+        <Method name="resetcalc" returnType="void" visibility="public"/>
+        <Method name="Component" returnType="void" visibility="public"/>
+        <Method name="getbinbitcalcres" returnType="void" visibility="public"/>
+        <Method name="getdecbitcalcres" returnType="void" visibility="public"/>
+        <Method name="gethexbitcalcres" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MainMenu" package="binarycounter" visibility="public" xPosition="538.0" yPosition="427.0">
+      <Fields>
+        <Field name="mainframe" type="JFrame" visibility="package"/>
+        <Field name="bincalc" type="JButton" visibility="package"/>
+        <Field name="title" type="JLabel" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Component" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="binarycounter.MainMenu" target="binarycounter.BinCount"/>
+    <IsRelation name="is" source="binarycounter.BitwiseCalculator" target="binarycounter.MainMenu"/>
+    <IsRelation name="is" source="binarycounter.BinaryConverter" target="binarycounter.MainMenu"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
